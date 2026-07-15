@@ -5,6 +5,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── 0. PRELOADER — Dismiss after content is ready ──────────── */
+  const preloader = document.getElementById('preloader');
+  const hidePreloader = () => {
+    if (preloader) {
+      preloader.classList.add('hide');
+      // Remove from DOM after transition
+      setTimeout(() => preloader.remove(), 750);
+    }
+  };
+  // Hide after 1.8s — fast enough to feel snappy, long enough to brand
+  const preloaderTimer = setTimeout(hidePreloader, 1800);
+  // Also hide immediately if page was already loaded (cached)
+  if (document.readyState === 'complete') {
+    clearTimeout(preloaderTimer);
+    setTimeout(hidePreloader, 400);
+  }
+  window.addEventListener('load', () => {
+    clearTimeout(preloaderTimer);
+    setTimeout(hidePreloader, 600);
+  });
+
   /* ── 1. NAVBAR: Scroll Glass Effect ──────────────────────── */
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -217,7 +238,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── 11. GOLD SHIMMER on logo hover ─────────────────────── */
+  /* ── 11. HERO SLIDESHOW ────────────────────────── */
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let currentSlide = 0;
+    setInterval(() => {
+      heroSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      heroSlides[currentSlide].classList.add('active');
+    }, 5000); // Switch every 5 seconds
+  }
+
+  /* ── 12. GOLD SHIMMER on logo hover ──────────────── */
   const logoEl = document.querySelector('.nav-logo');
   if (logoEl) {
     logoEl.addEventListener('mouseenter', () => {
@@ -228,12 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── 12. Page Load Entrance ──────────────────────────────── */
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.6s ease';
-  window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-  });
+  /* NOTE: Preloader handles initial page visibility.
+     No body opacity trick needed here. */
 
   console.log('%c✦ Jagdish Cloth Stores ✦', 'color: #D4AF37; font-size: 18px; font-family: serif; padding: 10px;');
   console.log('%cEst. 1957 | New Market, Dibrugarh', 'color: #A52020; font-size: 12px;');

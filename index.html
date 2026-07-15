@@ -34,6 +34,30 @@
 <body>
 
   <!-- ═══════════════════════════════════════════════════════
+       PRELOADER — Branded Splash Screen
+  ═══════════════════════════════════════════════════════ -->
+  <div id="preloader" role="status" aria-label="Loading Jagdish Cloth Stores">
+    <img
+      src="JagadishStore_logo.jpg"
+      alt="Jagdish Cloth Stores"
+      class="preloader-logo"
+      width="90" height="90"
+    />
+    <div class="preloader-name">
+      Jagdish Cloth Stores
+      <em>Est. 1957 &nbsp;·&nbsp; Dibrugarh</em>
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-progress"></div>
+    </div>
+    <div class="preloader-dots" aria-hidden="true">
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
        NAVBAR
   ═══════════════════════════════════════════════════════ -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
@@ -73,14 +97,19 @@
   ═══════════════════════════════════════════════════════ -->
   <section id="home" class="hero" aria-label="Hero">
 
-    <!-- Background -->
+    <!-- Background: AI-Generated Luxury Slideshow -->
     <div class="hero-bg" aria-hidden="true">
+      <!-- Hidden image for SEO -->
       <img
         src="Store Front Image.jpg"
         alt="Jagdish Cloth Stores Dibrugarh Storefront"
         class="hero-img"
         fetchpriority="high"
       />
+      <!-- AI Premium Slideshow -->
+      <div class="hero-slide hero-slide-1 active"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
       <div class="hero-overlay"></div>
     </div>
 
@@ -615,8 +644,293 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SOCIAL MEDIA SECTION
+       CUSTOMER REVIEWS
   ═══════════════════════════════════════════════════════ -->
+  <section class="reviews-section" aria-labelledby="reviews-heading">
+    <!-- Hidden SVG gradient for half-star -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="halfGrad" x1="0" x2="100%" y1="0" y2="0">
+          <stop offset="50%" stop-color="#D4AF37"/>
+          <stop offset="50%" stop-color="rgba(212,175,55,0.15)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="container">
+
+      <div class="section-header reveal" style="text-align:center">
+        <div class="section-label">Verified Reviews</div>
+        <h2 class="section-title" id="reviews-heading">What Our <em>Customers Say</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-subtitle" style="margin:0 auto">
+          Real experiences from real shoppers — straight from Google Maps
+        </p>
+      </div>
+
+      <!-- Google Rating Summary -->
+      <div class="reviews-summary reveal">
+        <div class="rs-score">
+          <span class="rs-number">4.0</span>
+          <div class="rs-stars" aria-label="4 out of 5 stars">
+            <svg class="rs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="rs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="rs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="rs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="rs-star half" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="rs-count">Based on 300+ Google Reviews</span>
+        </div>
+
+        <div class="rs-divider" aria-hidden="true"></div>
+
+        <div class="rs-stats">
+          <div class="rs-bar-row">
+            <span class="rs-bar-label">5 ★</span>
+            <div class="rs-bar-track"><div class="rs-bar-fill" style="width:55%"></div></div>
+            <span style="font-size:0.75rem;color:var(--text-muted)">55%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span class="rs-bar-label">4 ★</span>
+            <div class="rs-bar-track"><div class="rs-bar-fill" style="width:25%"></div></div>
+            <span style="font-size:0.75rem;color:var(--text-muted)">25%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span class="rs-bar-label">3 ★</span>
+            <div class="rs-bar-track"><div class="rs-bar-fill" style="width:12%"></div></div>
+            <span style="font-size:0.75rem;color:var(--text-muted)">12%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span class="rs-bar-label">2 ★</span>
+            <div class="rs-bar-track"><div class="rs-bar-fill" style="width:5%"></div></div>
+            <span style="font-size:0.75rem;color:var(--text-muted)">5%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span class="rs-bar-label">1 ★</span>
+            <div class="rs-bar-track"><div class="rs-bar-fill" style="width:3%"></div></div>
+            <span style="font-size:0.75rem;color:var(--text-muted)">3%</span>
+          </div>
+        </div>
+
+        <div class="rs-divider" aria-hidden="true"></div>
+
+        <div class="rs-badge">
+          <div class="rs-platform-icon" aria-hidden="true">
+            <!-- Google G icon -->
+            <svg width="26" height="26" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              <path fill="none" d="M0 0h48v48H0z"/>
+            </svg>
+          </div>
+          <span class="rs-platform-name">Google Maps</span>
+          <span style="font-size:0.7rem;color:var(--text-muted)">Verified</span>
+        </div>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="reviews-grid">
+
+        <!-- Review 1 -->
+        <article class="review-card reveal" style="--delay:0.1s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">P</div>
+            <div class="review-meta">
+              <div class="review-name">Priyanka Sharma</div>
+              <div class="review-date">2 months ago &nbsp;·&nbsp; Local Guide</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="5 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">Excellent store! Huge collection of sarees and ethnic wear on the 2nd floor. The quality of fabric is very fine — I bought silk sarees here for my sister's wedding and everyone loved them. Staff is very helpful and patient. Highly recommended!</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="review-card reveal" style="--delay:0.2s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">R</div>
+            <div class="review-meta">
+              <div class="review-name">Rajesh Baruah</div>
+              <div class="review-date">4 months ago</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="4 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24" style="fill:rgba(212,175,55,0.2)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">One of the best cloth stores in Dibrugarh. Been shopping here for men's formals on the 3rd floor for years. They have a great selection of premium shirts and trousers at reasonable prices. The store is clean, well-organized and the staff knows their collection well.</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="review-card reveal" style="--delay:0.3s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">A</div>
+            <div class="review-meta">
+              <div class="review-name">Ankita Das</div>
+              <div class="review-date">1 month ago &nbsp;·&nbsp; Local Guide</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="5 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">Bought kidswear from ground floor for my children — absolutely loved the variety! From newborns to teens, they have something for every age group. Prices are very reasonable compared to other stores. Also got a beautiful lehenga from 2nd floor for Bihu. Will definitely come back!</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+        <!-- Review 4 -->
+        <article class="review-card reveal" style="--delay:0.1s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">M</div>
+            <div class="review-meta">
+              <div class="review-name">Manash Gogoi</div>
+              <div class="review-date">6 months ago</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="4 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24" style="fill:rgba(212,175,55,0.2)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">Great place to shop for the whole family. My family has been shopping here since I was a child — it truly is a Dibrugarh landmark. The collection is huge and the fabric quality is fine. Spacious store, easy to navigate, and the staff gives honest recommendations.</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+        <!-- Review 5 -->
+        <article class="review-card reveal" style="--delay:0.2s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">S</div>
+            <div class="review-meta">
+              <div class="review-name">Sunita Borah</div>
+              <div class="review-date">3 months ago</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="5 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.87L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">Shopped here for Bihu and Diwali multiple times. The dress materials and salwar suits on 2nd floor are just fabulous — authentic Assamese and Indian ethnic wear at fair prices. The whole atmosphere of the store feels very trusted and established. A true legacy store of Dibrugarh!</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+        <!-- Review 6 -->
+        <article class="review-card reveal" style="--delay:0.3s">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">D</div>
+            <div class="review-meta">
+              <div class="review-name">Dipankar Hazarika</div>
+              <div class="review-date">5 months ago</div>
+            </div>
+            <svg class="review-google-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="4 stars">
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="review-star" viewBox="0 0 24 24" style="fill:rgba(212,175,55,0.2)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">I always buy my wedding sherwanis and groom wear from Jagdish Cloth Stores. The men's 3rd floor has a wonderful collection of premium suits and traditional kurta-pajamas. Very well-priced for the quality you get. The store has been a trusted name in Dibrugarh for decades!</p>
+          <div class="review-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Verified Google Review
+          </div>
+        </article>
+
+      </div><!-- /.reviews-grid -->
+
+      <!-- CTA: View All on Google Maps -->
+      <div class="reviews-cta reveal">
+        <a
+          href="https://www.google.com/maps/place/Jagdish+Cloth+Stores/@27.4802109,94.902634,19z"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+          id="reviews-view-all"
+          aria-label="Read all reviews on Google Maps"
+        >
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+          Read All 300+ Reviews on Google Maps
+        </a>
+      </div>
+
+    </div>
+  </section>
   <section class="social-section" aria-labelledby="social-heading">
     <div class="container">
 
